@@ -5,11 +5,17 @@ import (
 	"os"
 )
 
+var CIVERSION = "dev"
+
 type GitLab struct {
 }
 
 func (gl *GitLab) Name() string {
 	return "GitLab CI"
+}
+
+func (gl *GitLab) Version() string {
+	return CIVERSION
 }
 
 func (gl *GitLab) GetCurrentBranch() string {
